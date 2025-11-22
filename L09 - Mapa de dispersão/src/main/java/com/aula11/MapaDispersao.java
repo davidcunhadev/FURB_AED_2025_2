@@ -65,13 +65,13 @@ public class MapaDispersao<T> {
     public double calcularFatorCarga() {
         int totalElementos = 0;
 
-        for (ListaEncadeada<NoMapa<T>> lista : this.info) {
-            if (lista != null) {
-                totalElementos += lista.obterComprimento();
+        for (int i = 0; i < info.length; i++) {
+            if (info[i] != null) {
+                totalElementos += info[i].obterComprimento();
             }
         }
 
-        return (double) totalElementos / this.info.length;
+        return (1.0) * totalElementos / this.info.length;
     }
 
 }
