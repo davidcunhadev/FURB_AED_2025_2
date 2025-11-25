@@ -7,17 +7,12 @@ public class BuscaLinearVetorOrdenado<T extends Comparable<T>> extends BuscaAbst
         int n = this.getInfo().length;
 
         for (int i = 0; i < n - 1; i++) {
-
-            if (valor.compareTo((T) this.getInfo()[i]) == 0) {
+            if (this.getInfo()[i].equals(valor)) {
                 return i;
             }
 
             if (valor.compareTo((T) this.getInfo()[i]) < 0) {
                 break;
-            }
-
-            if (valor.compareTo((T) this.getInfo()[i]) > 0) {
-                continue;
             }
         }
 
